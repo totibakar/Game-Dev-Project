@@ -29,12 +29,14 @@ public class FPS_Move : MonoBehaviour
         if (Camera.main == null) return;
 
         // --- 1. MOUSE LOOK ---
-        // Rotate ONLY the Hero Body horizontally (Y-axis)
         float mouseX = Input.GetAxis("Mouse X") * speedPutar;
+        float mouseY = Input.GetAxis("Mouse Y") * speedPutar;
+
+        // Rotate body horizontally (Y-axis)
         transform.Rotate(0, mouseX, 0);
 
-        // Rotate ONLY the Camera vertically (X-axis)
-        rotationY += Input.GetAxis("Mouse Y") * speedPutar;
+        // Pitch main camera vertically (X-axis)
+        rotationY += mouseY;
         rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
         Camera.main.transform.localEulerAngles = new Vector3(-rotationY, 0, 0);
 
@@ -42,11 +44,24 @@ public class FPS_Move : MonoBehaviour
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
-        // Calculate move direction relative to body rotation
-        Vector3 moveDir = transform.right * h + transform.forward * v;
-        
-        // CRITICAL FIX: Lock movement to the X-Z plane so looking up doesn't make you fly
-        moveDir.y = 0f; 
+        // Fetch camera directional vectors directly from Camera.main
+        Vector3 camForward = Camera.main.transform.forward;
+        Vector3 camRight = Camera.main.transform.right;
+
+        // Flatten Y axis so looking up or down doesn't tilt walking direction
+        camForward.y = 0f;
+        camRight.y = 0f;
+        camForward.Normalize();
+        camRight.Normalize();
+
+        // Calculate move direction relative strictly to Camera.main direction
+        Vector3 moveDir = camForward * v + camRight * h;
+
+        // Prevent diagonal movement speed boost (W + A)
+        if (moveDir.magnitude > 1f)
+        {
+            moveDir.Normalize();
+        }
 
         // --- 3. GRAVITY & GROUNDING ---
         if (controller.isGrounded && velocity.y < 0)
@@ -56,7 +71,7 @@ public class FPS_Move : MonoBehaviour
 
         velocity.y += gravity * Time.deltaTime;
 
-        // Apply final movement via CharacterController
+        // Apply final movement
         controller.Move((moveDir * speed + velocity) * Time.deltaTime);
     }
 }
