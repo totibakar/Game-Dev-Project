@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class SchoolDoorTrigger : MonoBehaviour
 {
     [Header("Settings")]
-    public string nextSceneName = "Level2_SchoolInterior";
+    public string nextSceneName = "thankyou";
 
     private void OnTriggerEnter(Collider other)
     {

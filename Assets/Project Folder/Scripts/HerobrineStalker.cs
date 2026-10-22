@@ -250,13 +250,18 @@ public class HerobrineStalker : MonoBehaviour
         // Wait another 2.5 seconds on the Game Over screen before shutting down the game
         yield return new WaitForSeconds(2.5f);
 
-        Debug.Log("Exiting Game...");
-        Application.Quit();
+        //Debug.Log("Exiting Game...");
+        //Application.Quit();
 
         // Note: Application.Quit() does not close the window inside the Unity Editor Play Mode. 
         // To test it in the Editor, you can uncomment the line below:
-        
+
         //UnityEditor.EditorApplication.isPlaying = false;
+
+        Debug.Log("Returning to Main Menu...");
+
+        // Load your Main Menu scene (make sure the string matches your exact scene name)
+        SceneManager.LoadScene("Main Menu");
 
     }
 }
