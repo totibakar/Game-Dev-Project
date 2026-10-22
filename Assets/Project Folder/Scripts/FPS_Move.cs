@@ -15,6 +15,12 @@ public class FPS_Move : MonoBehaviour
     public float gravity = -9.81f;
     private Vector3 velocity;
 
+    [Header("Footstep Settings")]
+    public AudioSource footstepAudioSource;
+    public AudioClip[] footstepClips; // Drag your footstep audio clips here in the Inspector
+    public float stepInterval = 0.5f;   // Time in seconds between each footstep sound
+    private float stepTimer;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -22,6 +28,12 @@ public class FPS_Move : MonoBehaviour
         // Lock and hide mouse cursor inside game view
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        // If you didn't assign it in the inspector, try grabbing it from the character
+        if (footstepAudioSource == null)
+        {
+            footstepAudioSource = GetComponent<AudioSource>();
+        }
     }
 
     void Update()
@@ -73,5 +85,33 @@ public class FPS_Move : MonoBehaviour
 
         // Apply final movement
         controller.Move((moveDir * speed + velocity) * Time.deltaTime);
+
+        // --- 4. FOOTSTEPS ---
+        if (controller.isGrounded && moveDir.magnitude > 0.1f)
+        {
+            stepTimer -= Time.deltaTime;
+
+            if (stepTimer <= 0f)
+            {
+                PlayFootstepSound();
+                stepTimer = stepInterval;
+            }
+        }
+        else
+        {
+            // Reset timer so the first footstep plays immediately when moving again
+            stepTimer = 0f;
+        }
+    }
+
+    void PlayFootstepSound()
+    {
+        if (footstepAudioSource == null || footstepClips.Length == 0) return;
+
+        // Pick a random clip from the array to make footsteps sound natural
+        int randomIndex = Random.Range(0, footstepClips.Length);
+        AudioClip clip = footstepClips[randomIndex];
+
+        footstepAudioSource.PlayOneShot(clip);
     }
 }

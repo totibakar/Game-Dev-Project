@@ -8,7 +8,7 @@ public class Mainmeny : MonoBehaviour
     //LoadScene
     public void NewGame() 
     {
-        SceneManager.LoadScene("puta");
+        SceneManager.LoadScene("Level 1 - Intro (latest)");
     }
   
     //Quit
