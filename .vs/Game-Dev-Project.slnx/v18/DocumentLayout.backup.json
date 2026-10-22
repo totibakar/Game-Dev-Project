@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\andye\\Game-Dev-Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\andye\\game-dev-project\\assets\\project folder\\scripts\\dialogmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\project folder\\scripts\\dialogmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\andye\\Game-Dev-Project\\Assets\\Project Folder\\Scripts\\SchoolDoorTrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Project Folder\\Scripts\\SchoolDoorTrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\andye\\game-dev-project\\assets\\project folder\\scripts\\notemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\project folder\\scripts\\notemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\andye\\game-dev-project\\assets\\project folder\\scripts\\playerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\project folder\\scripts\\playerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\andye\\game-dev-project\\assets\\project folder\\scripts\\fps_move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\project folder\\scripts\\fps_move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\andye\\game-dev-project\\assets\\project folder\\scripts\\noteitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\project folder\\scripts\\noteitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,23 +34,82 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DIalogManager.cs",
+              "DocumentMoniker": "C:\\Users\\andye\\Game-Dev-Project\\Assets\\Project Folder\\Scripts\\DIalogManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Project Folder\\Scripts\\DIalogManager.cs",
+              "ToolTip": "C:\\Users\\andye\\Game-Dev-Project\\Assets\\Project Folder\\Scripts\\DIalogManager.cs",
+              "RelativeToolTip": "Assets\\Project Folder\\Scripts\\DIalogManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T18:10:52.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlayerInteraction.cs",
+              "DocumentMoniker": "C:\\Users\\andye\\Game-Dev-Project\\Assets\\Project Folder\\Scripts\\PlayerInteraction.cs",
+              "RelativeDocumentMoniker": "Assets\\Project Folder\\Scripts\\PlayerInteraction.cs",
+              "ToolTip": "C:\\Users\\andye\\Game-Dev-Project\\Assets\\Project Folder\\Scripts\\PlayerInteraction.cs",
+              "RelativeToolTip": "Assets\\Project Folder\\Scripts\\PlayerInteraction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T09:52:49.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FPS_Move.cs",
+              "DocumentMoniker": "C:\\Users\\andye\\Game-Dev-Project\\Assets\\Project Folder\\Scripts\\FPS_Move.cs",
+              "RelativeDocumentMoniker": "Assets\\Project Folder\\Scripts\\FPS_Move.cs",
+              "ToolTip": "C:\\Users\\andye\\Game-Dev-Project\\Assets\\Project Folder\\Scripts\\FPS_Move.cs",
+              "RelativeToolTip": "Assets\\Project Folder\\Scripts\\FPS_Move.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAowFkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T09:37:02.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NoteManager.cs",
+              "DocumentMoniker": "C:\\Users\\andye\\Game-Dev-Project\\Assets\\Project Folder\\Scripts\\NoteManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Project Folder\\Scripts\\NoteManager.cs",
+              "ToolTip": "C:\\Users\\andye\\Game-Dev-Project\\Assets\\Project Folder\\Scripts\\NoteManager.cs",
+              "RelativeToolTip": "Assets\\Project Folder\\Scripts\\NoteManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T09:36:05.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "NoteItem.cs",
               "DocumentMoniker": "C:\\Users\\andye\\Game-Dev-Project\\Assets\\Project Folder\\Scripts\\NoteItem.cs",
               "RelativeDocumentMoniker": "Assets\\Project Folder\\Scripts\\NoteItem.cs",
               "ToolTip": "C:\\Users\\andye\\Game-Dev-Project\\Assets\\Project Folder\\Scripts\\NoteItem.cs",
               "RelativeToolTip": "Assets\\Project Folder\\Scripts\\NoteItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-22T09:14:26.613Z",
+              "WhenOpened": "2026-10-22T09:34:35.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SchoolDoorTrigger.cs",
+              "DocumentMoniker": "C:\\Users\\andye\\Game-Dev-Project\\Assets\\Project Folder\\Scripts\\SchoolDoorTrigger.cs",
+              "RelativeDocumentMoniker": "Assets\\Project Folder\\Scripts\\SchoolDoorTrigger.cs",
+              "ToolTip": "C:\\Users\\andye\\Game-Dev-Project\\Assets\\Project Folder\\Scripts\\SchoolDoorTrigger.cs",
+              "RelativeToolTip": "Assets\\Project Folder\\Scripts\\SchoolDoorTrigger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T17:55:31.549Z",
               "EditorCaption": ""
             }
           ]

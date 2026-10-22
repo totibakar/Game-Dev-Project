@@ -16,6 +16,9 @@ public class HerobrineStalker : MonoBehaviour
     public float jumpscareDuration = 2f;
     public float rushSpeed = 35f;
 
+    [Header("Gameplay UI Warning")]
+    public GameObject warningTextObject; // Drag your WarningText GameObject here
+
     [Header("Jumpscare Face Alignment")]
     [Tooltip("How far from the camera lens the ghost stops. Increase if the head clips through the screen.")]
     public float stopDistance = 1.1f;
@@ -23,7 +26,7 @@ public class HerobrineStalker : MonoBehaviour
     public float ghostFaceHeightOffset = 1.7f;
 
     [Header("Timer Settings")]
-    public float gracePeriod = 5f;
+    public float gracePeriod = 180f;
     public float minSpawnDelay = 3f;
     public float maxSpawnDelay = 6f;
 
@@ -135,6 +138,8 @@ public class HerobrineStalker : MonoBehaviour
         if (ghostCollider != null) ghostCollider.enabled = true;
 
         isGhostActiveState = true;
+
+        if (warningTextObject != null) warningTextObject.SetActive(true);
     }
 
     void Vanish()
@@ -145,6 +150,8 @@ public class HerobrineStalker : MonoBehaviour
 
         if (ghostVisuals != null) ghostVisuals.SetActive(false);
         if (ghostCollider != null) ghostCollider.enabled = false;
+
+        if (warningTextObject != null) warningTextObject.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -230,7 +237,7 @@ public class HerobrineStalker : MonoBehaviour
     IEnumerator GameOverRoutine()
     {
         // Wait for the initial jumpscare audio/flash to hit (e.g., 1.5 seconds)
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2f);
 
         // Hide the flashing jumpscare overlay and show the persistent Game Over screen
         if (jumpscareUI != null) jumpscareUI.SetActive(false);
@@ -248,6 +255,8 @@ public class HerobrineStalker : MonoBehaviour
 
         // Note: Application.Quit() does not close the window inside the Unity Editor Play Mode. 
         // To test it in the Editor, you can uncomment the line below:
-        // UnityEditor.EditorApplication.isPlaying = false;
+        
+        //UnityEditor.EditorApplication.isPlaying = false;
+
     }
 }
